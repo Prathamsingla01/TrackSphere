@@ -8,9 +8,10 @@ import java.util.Scanner;
  * Provides reusable validation and safe console input reading methods.
  * Prevents the application from crashing due to improper user inputs.
  * Demonstrates:
- *  1. String manipulation, trimming, regex matching (Lecture 6-9).
- *  2. Exception handling with try-catch for InputMismatchException and NumberFormatException (Lecture 10-15).
- *  3. Static utility methods.
+ * 1. String manipulation, trimming, regex matching (Lecture 6-9).
+ * 2. Exception handling with try-catch for InputMismatchException and
+ * NumberFormatException (Lecture 10-15).
+ * 3. Static utility methods.
  *
  * Evaluation: Programming in Java (25CSE0202).
  */
@@ -23,7 +24,8 @@ public class InputValidator {
     }
 
     /**
-     * Validates passenger name (must be alphabetic with spaces, 2 to 50 characters).
+     * Validates passenger name (must be alphabetic with spaces, 2 to 50
+     * characters).
      *
      * @param name Name string to test
      * @return true if valid, false otherwise
@@ -89,12 +91,13 @@ public class InputValidator {
         }
         String b = berth.trim().toUpperCase();
         return b.equals("LOWER") || b.equals("MIDDLE") || b.equals("UPPER") ||
-               b.equals("SIDE_LOWER") || b.equals("SIDE_UPPER") || b.equals("NO_PREFERENCE");
+                b.equals("SIDE_LOWER") || b.equals("SIDE_UPPER") || b.equals("NO_PREFERENCE");
     }
 
     /**
      * Reads a valid integer from the scanner within a specified range [min, max].
-     * Catches NumberFormatException / InputMismatchException so the program never crashes.
+     * Catches NumberFormatException / InputMismatchException so the program never
+     * crashes.
      *
      * @param scanner Scanner instance
      * @param prompt  User instruction message
@@ -152,7 +155,8 @@ public class InputValidator {
             if (isValidMobile(mobile)) {
                 return mobile;
             }
-            System.out.println("   [Invalid Mobile] Please enter a valid 10-digit Indian mobile number (starts with 6, 7, 8, or 9).");
+            System.out.println(
+                    "   [Invalid Mobile] Please enter a valid 10-digit Indian mobile number (starts with 6, 7, 8, or 9).");
         }
     }
 
